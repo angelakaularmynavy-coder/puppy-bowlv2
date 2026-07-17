@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🐶 Puppy Bowl</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🏆 Welcome to the Puppy Bowl! 🏆</h1>
+    </header>
+
+    <main>
+      <!-- Player Details Section -->
+      <section id="player-container" class="details-section">
+        <h2>Selected Player</h2>
+        <div id="player-info">
+          <p class="placeholder">
+            Please select a player to view more details!
+          </p>
+        </div>
+      </section>
+
+      <!-- Roster Section -->
+      <section id="all-players-container" class="roster-section">
+        <h2>Puppy Roster</h2>
+        <div id="loading" class="loading">Loading puppies...</div>
+        <ul id="players-list" class="players-list"></ul>
+      </section>
+
+      <!-- New Player Form Section -->
+      <section id="new-player-form-container" class="form-section">
+        <h2>Add a New Puppy</h2>
+        <form id="new-player-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="breed">Breed:</label>
+          <input type="text" id="breed" name="breed" required />
+
+          <label for="status">Status:</label>
+          <select id="status" name="status">
+            <option value="bench">Bench</option>
+            <option value="field">Field</option>
+          </select>
+
+          <label for="imageUrl">Image URL:</label>
+          <input
+            type="url"
+            id="imageUrl"
+            name="imageUrl"
+            placeholder="https://example.com/dog.jpg"
+          />
+
+          <button type="submit">Add Puppy to Roster</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Puppy Bowl Admin Portal &copy; 2026</p>
+    </footer>
+
+    <script src="./api.js"></script>
+    <script src="./render.js"></script>
+    <script src="./index.js"></script>
+    
+  </body>
+</html>
